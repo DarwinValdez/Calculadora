@@ -1,22 +1,28 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
-body{
-    background-color: rgb(0, 80, 126);
+body {
+   background-color: rgb(29, 29, 29);
+    font-family: 'Roboto';
+    overflow-y: hidden;
 }
 
-.box-calc{
+
+
+.box-calc {
+    position: absolute;
+    left: 10%;
+    top: 10%;
     display: grid;
-    justify-content: center;
+    margin: auto;
     align-content: center;
-    min-height: 100vh;
-    grid-template-columns: repeat(4,100px);
+    grid-template-columns: repeat(4, 100px);
     grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 }
 
-.box-calc button{
+.box-calc button {
     cursor: pointer;
     font-size: 2rem;
     border: 1px solid white;
@@ -24,14 +30,14 @@ body{
     background-color: rgba(255, 255, 255, .75);
 }
 
-.box-calc button:hover{
-    background-color: rgb(7, 4, 31);
+.box-calc button:hover {
+    background-color: rgb(21, 0, 78);
     color: white;
 }
 
-.output{
+.output {
     grid-column: 1 / -1;
-    background-color:rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.75);
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
@@ -39,10 +45,64 @@ body{
     padding: 10px;
     word-wrap: break-word;
     word-break: break-all;
+
 }
 
-.output .display{
+.output .display {
     color: black;
     font-size: 1.85rem;
     text-align: right;
+    border-radius: 5px;
+}
+
+.box-title {
+    position: relative;
+    width: 42rem;
+    left: -50%;
+}
+
+
+.box-title h1 {
+    color: aliceblue;
+    position: relative;
+    left: 45rem;
+    top: -33rem;
+    font-size: 45px;
+}
+
+
+.box-title p {
+    color: wheat;
+    position: relative;
+    left: 35rem;
+    top: -30rem;
+    font-size: 25px;
+}
+
+
+
+.box-title button{
+    color: aliceblue;
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: rgb(179, 95, 0);
+    border-style: none;
+    box-shadow: 3px 1px  rgb(17, 17, 17);
+    position: relative;
+    left: 47rem;
+    top: -22rem;
+}
+
+.box-title button:hover{
+    background-color: rgb(32, 32, 32);
+}
+
+footer{
+    position: absolute;
+    top: 97%;
+    color: rgb(255, 255, 255);
+    background-color: rgb(53, 53, 53);
+    width: 94.4rem;
+    text-align: center;
 }

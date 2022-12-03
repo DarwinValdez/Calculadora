@@ -1,7 +1,7 @@
 const bottonNumeros = document.getElementsByName("date-number");
 const bottonOpera = document.getElementsByName("date-opera");
 const bottonIgual = document.getElementsByName("date-igual")[0];
-const bottonDelete = document.getElementsByName("date-delete");
+const bottonDelete = document.getElementsByName("date-delete")[0];
 let result = document.getElementById("result");
 let opeActual = '';
 let opeAnterior = '';
@@ -28,6 +28,7 @@ bottonDelete.addEventListener("click", function () {
   clear();
   actualizarDisplay();
 });
+
 
 function selectOperacion(op) {
   if (opeActual === '') return;
@@ -57,6 +58,7 @@ function calcular() {
       break;
     case "/":
       calculo = anterior / actual;
+      break;
 
       default:
         return;
@@ -81,3 +83,4 @@ function clear() {
 function actualizarDisplay() {
   result.value = opeActual;
 }
+
